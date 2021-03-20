@@ -55,20 +55,32 @@ def Symptom_analysis(x):
     dic_index = {}
     dic_strings = {}
 
-    for i in range(1, 133):
-        dic_index[str(i)] = data_X.columns.values[i-1]
+    try:
+        y = int(x[0])
+    
+        for i in range(1,133):
+            dic_index[str(i)] = data_X.columns.values[i-1]
 
-    for item in data_X.columns.values:
-        dic_strings[item] = 0
+        for item in data_X.columns.values:
+            dic_strings[item] = 0
 
-    for item in x:
-        dic_strings[dic_index[item]] = 1
+        for item in x:
+            dic_strings[dic_index[item]] = 1
+
+        
+        # ******* Data seperation ********
+
+    except ValueError:
+        for item in data_X.columns.values:
+            dic_strings[item] = 0
+
+        for item in x:
+              dic_strings[item] = 1    
 
     arguments = dic_strings.values()
     arguments = list(arguments)
     arguments = np.array(arguments)
     arguments = np.reshape(arguments, (1, 132))
-    # ******* Data seperation ********
 
     array = data.values
     X = array[:, 0:132]
@@ -89,6 +101,8 @@ def Symptom_analysis(x):
     return ans[0]
 
 
-print(Symptom_analysis())
+# print(type(inputs))
+print(Symptom_analysis(inputs))
+
 
 

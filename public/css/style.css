@@ -13,6 +13,23 @@ body {
   color: #444444;
 }
 
+
+.result{
+  height: 40%;
+  margin-top : 10rem !important;
+  margin-bottom : 8rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.result h1{
+  background-color: #11dbcf;
+  font-size: 60px;
+  border-radius: 8px;
+}
+
 a {
   color: #2487ce;
 }
