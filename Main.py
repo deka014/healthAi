@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import numpy as np
+import sys
 import matplotlib.pyplot as plt
 from sklearn import tree
 import os
@@ -26,7 +27,12 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-def Symptom_analysis():
+
+
+inputs = sys.argv[1]
+
+def Symptom_analysis(x):
+
 
     # ******** Data loading *********
 
@@ -41,8 +47,27 @@ def Symptom_analysis():
     data = pd.concat(concat)
     le = LabelEncoder()
 
+    x = x.split(',')
     data['prognosis'] = le.fit_transform(data['prognosis'])
 
+    data_X = data.drop(['prognosis'], axis = 1)
+
+    dic_index = {}
+    dic_strings = {}
+
+    for i in range(1, 133):
+        dic_index[str(i)] = data_X.columns.values[i-1]
+
+    for item in data_X.columns.values:
+        dic_strings[item] = 0
+
+    for item in x:
+        dic_strings[dic_index[item]] = 1
+
+    arguments = dic_strings.values()
+    arguments = list(arguments)
+    arguments = np.array(arguments)
+    arguments = np.reshape(arguments, (1, 132))
     # ******* Data seperation ********
 
     array = data.values
@@ -57,16 +82,13 @@ def Symptom_analysis():
 
     loaded_model = pickle.load(open('finalized_model.sav', 'rb'))
 
-    x = [0, 1, 1, 0, 1, 1 , 1, 1, 0, 1, 0]
-    x = x + [0 for i in range(121)]
-    x = [x]
+    labels = loaded_model.predict(arguments)
 
-    y = loaded_model.predict(x)
-
-    ans = le.inverse_transform(y)
+    ans = le.inverse_transform(labels)
 
     return ans[0]
 
+
 print(Symptom_analysis())
 
-symptom_arr = data.columns.values
+
