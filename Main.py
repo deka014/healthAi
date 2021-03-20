@@ -25,7 +25,7 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-def Symptom_analysis(x):
+def Symptom_analysis():
 
     # ******** Data loading *********
 
@@ -65,3 +65,7 @@ def Symptom_analysis(x):
     ans = le.inverse_transform(y)
 
     return ans[0]
+
+print(Symptom_analysis())
+
+# symptom_arr = data.columns.values
