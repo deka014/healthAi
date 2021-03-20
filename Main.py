@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -68,4 +69,4 @@ def Symptom_analysis():
 
 print(Symptom_analysis())
 
-# symptom_arr = data.columns.values
+symptom_arr = data.columns.values

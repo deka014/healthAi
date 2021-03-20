@@ -6,16 +6,9 @@ const path = require("path");
 
 const data = require("./data");
 
+var pyDisease = "unknown"
+
 const { spawn } = require("child_process");
-const py = spawn("python", ["Main.py", [1, 1, 2, 3]]);
-
-py.stdout.on("data", (data) => {
-  console.log(`wow you have ${data.toString()}`);
-});
-
-py.on("close", (code) => {
-  console.log(`child process exited with code ${code}`);
-});
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: true }));
@@ -31,8 +24,19 @@ app.get("/detection", (req, res) => {
   res.render("symptom", { data });
 });
 
-app.post("/", (req, res) => {
-  console.log(req.body)
+app.post("/", async (req, res) => {
+  const outputArray = Object.keys(req.body.disease);
+  const stringArray = outputArray.toString();
+//   console.log(stringArray)
+  const py = spawn("python", ["Main.py", stringArray] );
+
+  py.stdout.on("data", (data) => {
+    console.log(`wow you have ${data.toString()}`);
+  });
+
+  py.on("close", (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
 });
 
 app.listen(3000, () => {

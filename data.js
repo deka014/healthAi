@@ -131,5 +131,4 @@ module.exports = [
   "blister",
   "red_sore_around_nose",
   "yellow_crust_ooze",
-  "prognosis",
 ];
