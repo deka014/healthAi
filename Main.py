@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 import numpy as np
 import sys
@@ -27,9 +28,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
+
 inputs = sys.argv[1]
 
 def Symptom_analysis(x):
+
 
     # ******** Data loading *********
 
@@ -84,3 +87,8 @@ def Symptom_analysis(x):
     ans = le.inverse_transform(labels)
 
     return ans[0]
+
+
+print(Symptom_analysis())
+
+
