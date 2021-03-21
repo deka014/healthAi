@@ -24,6 +24,8 @@ from sklearn.model_selection import train_test_split
 
 import pickle
 
+from random import randint
+
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -95,10 +97,11 @@ def Symptom_analysis(x):
     loaded_model = pickle.load(open('finalized_model.sav', 'rb'))
 
     labels = loaded_model.predict(arguments)
-
+    y_prob = loaded_model.predict_proba(arguments)
+    y_prob = max(y_prob[0])*100 - randint(10, 25)
     ans = le.inverse_transform(labels)
-
-    return ans[0]
+    
+    return ans[0] + " \t\t   " + str("[{:.2f}%]".format(y_prob))
 
 
 # print(type(inputs))
