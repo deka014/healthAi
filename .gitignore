@@ -41,6 +41,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+eye_trained/
+venv/
 
 # TypeScript v1 declaration files
 typings/

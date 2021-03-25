@@ -25,7 +25,7 @@ body {
 }
 
 .result h1{
-  background-color: #11dbcf;
+  /* background-color: #11dbcf; */
   font-size: 60px;
   border-radius: 8px;
 }

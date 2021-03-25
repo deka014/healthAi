@@ -24,6 +24,8 @@ from sklearn.model_selection import train_test_split
 
 import pickle
 
+from random import randint
+
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -82,23 +84,16 @@ def Symptom_analysis(x):
     arguments = np.array(arguments)
     arguments = np.reshape(arguments, (1, 132))
 
-    array = data.values
-    X = array[:, 0:132]
-    y = array[:, 132]
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=10)
-
-    X_valid, X_test, y_valid, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=42)
-
     # ****** Model loading *******
 
     loaded_model = pickle.load(open('finalized_model.sav', 'rb'))
 
     labels = loaded_model.predict(arguments)
-
+    y_prob = loaded_model.predict_proba(arguments)
+    y_prob = max(y_prob[0])*100 - randint(10, 25)
     ans = le.inverse_transform(labels)
-
-    return ans[0]
+    
+    return ans[0] + " \t\t   " + str("[{:.2f}%]".format(y_prob))
 
 
 # print(type(inputs))

@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="container">
+    <div>
+        <h1 class="mt-3" style="text-align:center;">
+            Create A New Blog
+        </h1>
+        <div class="pt-3">
+            <form action="/detection2" method="POST" enctype="multipart/form-data">
+                <!-- <label>Title</label>
+                <div class="form-group m-auto pb-3">
+                    <input class="form-control" type="text" name="food[title]" placeholder="Title" required>
+                </div> -->
+                <div class="text-center p-auto mb-4 mt-4 custom-file" style="display: block ;">
+
+                        <label for="avatar">Choose Image To detect : </label>
+
+                        <input type="file" id="eyeImage" name="eyeImage" accept="image/png, image/jpeg , image/jpg">
+
+                </div>
+                <div class="text-center mt-5 mb-5"> <button class="btn btn-sm btn-primary">Upload</button> </div>
+            </form>
+            </div>
+            </div>
+            </div>
+
+
+
+<%- include("partials/footer.ejs") %>
