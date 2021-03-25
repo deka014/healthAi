@@ -84,14 +84,6 @@ def Symptom_analysis(x):
     arguments = np.array(arguments)
     arguments = np.reshape(arguments, (1, 132))
 
-    array = data.values
-    X = array[:, 0:132]
-    y = array[:, 132]
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=10)
-
-    X_valid, X_test, y_valid, y_test = train_test_split(X_test, y_test, test_size=0.5, random_state=42)
-
     # ****** Model loading *******
 
     loaded_model = pickle.load(open('finalized_model.sav', 'rb'))
