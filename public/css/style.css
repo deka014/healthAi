@@ -652,7 +652,7 @@ section {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
-.counts {
+/* .counts {
   padding: 60px 0;
 }
 
@@ -677,12 +677,12 @@ section {
   font-weight: 600;
   font-size: 14px;
   color: #1e6ca6;
-}
+} */
 
 /*--------------------------------------------------------------
 # About Video
 --------------------------------------------------------------*/
-.about-video .content {
+/* .about-video .content {
   font-size: 15px;
 }
 
@@ -808,7 +808,7 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Clients
@@ -840,7 +840,7 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonial-item {
+/* .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
   min-height: 320px;
@@ -929,12 +929,12 @@ section {
   .testimonials {
     margin: 30px 10px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
+/* .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
@@ -1062,12 +1062,12 @@ section {
 
 .services .iconbox-teal:hover .icon path {
   fill: #11dbcf;
-}
+} */
 
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
-.cta {
+/* .cta {
   background: #2487ce;
   background-size: cover;
   padding: 60px 0;
@@ -1100,12 +1100,12 @@ section {
 .cta .cta-btn:hover {
   background: #fff;
   color: #2487ce;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+/* .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
 
@@ -1255,12 +1255,12 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team .member {
+/* .team .member {
   margin-bottom: 20px;
   overflow: hidden;
   text-align: center;
@@ -1330,12 +1330,12 @@ section {
 
 .team .member:hover .social {
   opacity: 1;
-}
+} */
 
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
-.pricing .box {
+/* .pricing .box {
   padding: 40px 20px;
   text-align: center;
   border-radius: 8px;
@@ -1441,12 +1441,12 @@ section {
 .pricing .featured .btn-buy:hover {
   background: #fff;
   color: #2487ce;
-}
+} */
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq .faq-list {
+/* .faq .faq-list {
   padding: 0 100px;
 }
 
@@ -1522,12 +1522,12 @@ section {
   .faq .faq-list {
     padding: 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info {
+/* .contact .info {
   width: 100%;
   background: #fff;
 }
@@ -1682,12 +1682,12 @@ section {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
-.breadcrumbs {
+/* .breadcrumbs {
   padding: 15px 0;
   background: #f8fbfe;
   min-height: 40px;
@@ -1735,12 +1735,12 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+/* .portfolio-details {
   padding-top: 40px;
 }
 
@@ -1823,7 +1823,7 @@ section {
     position: static;
     margin-top: 30px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Footer
