@@ -32,14 +32,14 @@ The Image based eye disease detection feature lets the user upload images of the
 ## Node.js Server Gateway
 
 The server is the main connection and gateway between the python scripts and the front-end. It uses JS libraries and frameworks to transfer data between the clients
-and python scripts.
+and the scripts.
 
 
 
 
 ## Project Related Links 
 1) PPT Presentation - https://drive.google.com/file/d/1K-XO1x4bwnrQNfZCAhZnmkDRQvb79yGv/view?usp=sharing
-2) Git Hub Link - https://github.com/bbhupen/RTDS
+2) Git Hub Link - https://github.com/deka014/healthAi
 
 ## Contributing
 
