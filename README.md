@@ -7,7 +7,7 @@ Health AI is an integrated platform for  multipurpose assistance in the field of
 
 ## Symptom Based Detection
 
-The symptoms based disease detection feature has more than hundred symptoms that the user can choose as input. Using the inputs from the user the machine learning models predecits the disease along with the confidence score. 
+The symptoms based disease detection feature has more than hundred symptoms that the user can choose as input. Using the inputs from the user the machine learning models predicts the disease along with the confidence score. 
 - #### Screenshots : 
 
 ![default panel](public/img/Slide10.JPG)
