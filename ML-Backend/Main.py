@@ -78,6 +78,7 @@ def Symptom_analysis(x):
 
         for item in x:
               dic_strings[item] = 1    
+    
 
     arguments = dic_strings.values()
     arguments = list(arguments)

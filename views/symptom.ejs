@@ -1,15 +1,16 @@
 <%- include("partials/header.ejs") %>
 
 <div class="mt-5 pt-5">
-    <form  action="/" method="POST">
+    <form  action="/symptom-based-detection" method="POST">
     <div class="row">
  <% var index = 0; %>
   <% data.forEach(function(disease){ %>
     <% index++  %>
       <div class="col-lg-3">
             <div class="form-check">
-             <input type="checkbox" value=<%=disease%> class="form-check-input" name="disease[<%=index%>]" id=<%=disease%> />
-              <label class="form-check-label" for="exampleCheck1"><%=disease%></label>
+             <!-- <input type="checkbox" value=<%=disease%> class="form-check-input" name="disease[<%=index%>]" id=<%=disease%> /> -->
+             <input type="checkbox" value=<%=disease%> class="form-check-input" name="disease[]" id=<%=disease%> /> 
+             <label class="form-check-label" for="exampleCheck1"><%=disease%></label>
             </div>
       </div>
  
@@ -22,40 +23,5 @@
 
 </form>
 </div>
-
-<!-- <script>
-  var array = []
-
-  document.getElementById("done").addEventListener("click", function () {
-       var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-
-     for (var i = 0; i < checkboxes.length; i++) {
-      array.push(checkboxes[i].value)
-    }
-    console.log(array)
-
-    }); 
-
-    document.getElementById("myBtn").addEventListener("click", function () {
-        $.ajax({
-        type: "POST",
-        url: "/",
-        data: array,
-        success: function (data, status) {
-          alert('company added!');
-
-        },
-        error: function (data, status, res) {
-          console.log('err: ' + res);
-        }
-      });
-
-      }); 
-
-    
-
-  
-   
-</script> -->
 
 <%- include("partials/footer.ejs") %>
